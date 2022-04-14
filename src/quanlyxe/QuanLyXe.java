@@ -5,7 +5,7 @@ public class QuanLyXe {
 		XeBus xeBus1 = new XeBus();
 		xeBus1.dongCua();
 		
-		xeBus1.lan
+//		xeBus1.lan
 
 	}
 
