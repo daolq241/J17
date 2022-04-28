@@ -78,7 +78,16 @@ public class Main {
 				System.out.println("1. Add staff");
 				System.out.println("2. Delete staff");
 				System.out.println("Choice option: ");
-				String choice2 = sc.nextLine();
+				int choiceOption = Integer.parseInt(sc.nextLine());
+				switch(choiceOption) {
+				case 1: {
+					System.out.println("Add Staff");
+				}
+				
+				case 2: {
+					System.out.println("");
+				}
+				}
 				
 				
 			}
