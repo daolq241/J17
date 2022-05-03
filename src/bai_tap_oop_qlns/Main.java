@@ -89,6 +89,7 @@ public class Main {
 				boolean check3 = true;
 				while(check3) {
 				
+<<<<<<< HEAD
 						System.out.println("<----------Add / Delete Staff -------->");
 						System.out.println("1. Add Employee");
 						System.out.println("2. Add Manager");
@@ -181,6 +182,20 @@ public class Main {
 						}
 					
 					}
+=======
+				System.out.println("1. Add staff");
+				System.out.println("2. Delete staff");
+				System.out.println("Choice option: ");
+				int choiceOption = Integer.parseInt(sc.nextLine());
+				switch(choiceOption) {
+				case 1: {
+					System.out.println("Add Staff");
+				}
+				
+				case 2: {
+					System.out.println("");
+				}
+>>>>>>> c3ac76b036474e414266baf78b4314c14bf20e82
 				}
 				
 			
