@@ -1,5 +1,7 @@
 package bai_tap_oop_qlns;
 
+import java.util.Scanner;
+
 public class Staff {
 	protected String code;
 	protected String name;
@@ -71,6 +73,16 @@ public class Staff {
 				+ ", salary=" + salary + "]";
 	}
 	
+	public void inStaff(Scanner sc) {
+		System.out.println("Code: ");
+		this.code = sc.nextLine();
+		System.out.println("Name: ");
+		this.name = sc.nextLine();
+		System.out.println("Phone: ");
+		this.phone = sc.nextLine();
+		System.out.println("Working Day: ");
+		this.workingDay = Integer.parseInt(sc.nextLine());
+	}
 	
 	
 	

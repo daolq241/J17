@@ -1,8 +1,11 @@
 package bai_tap_oop_qlns;
 
+import java.util.Scanner;
+
 public class Employee extends Staff {
 	static int SALARY_DAY = 100;
 	private Manager manager;
+	private String role = "employee";
 
 	public Employee() {
 		super();
@@ -24,6 +27,12 @@ public class Employee extends Staff {
 		this.manager = manager;
 	}
 	
+	@Override
+	public void inStaff(Scanner sc) {
+		// TODO Auto-generated method stub
+		super.inStaff(sc);
+	}
+	
 
 	@Override
 	public void calcSalary() {
@@ -34,7 +43,7 @@ public class Employee extends Staff {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return super.toString() +" Manager: " + manager;
+		return super.toString()+ " Role: " + role +", Manager: " + manager;
 	}
 	
 	
