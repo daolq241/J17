@@ -1,0 +1,80 @@
+create database qlbansach;
+use  qlbansach;
+drop table chude;
+
+create table khachhang(
+	makh varchar(50) primary key not null,
+    taikhoan varchar(50),
+    matkhau varchar(50),
+    email varchar(50),
+    diachi varchar(50),
+    dienthoai varchar(50),
+    gioitinh varchar(50),
+    ngaysinh varchar(50),
+    hoten varchar(50)
+);
+
+create table donhang (
+	madonhang varchar(50) primary key not null,
+    dathanhtoan varchar(50),
+    ngaygiao datetime,
+    ngaydat datetime,
+    tinhtranggh varchar(50),
+    makh varchar(50),
+    constraint fk_makh foreign key (makh) references khachhang(makh)
+);
+
+create table sach (
+	masach varchar(50) primary key not null,
+    tensach varchar(50),
+    giaban double,
+    mota text,
+    anhbia varchar(100),
+    ngaycapnhat datetime,
+    soluongton int,
+    machude varchar(50),
+    manxb varchar(50)
+);
+
+alter table sach add constraint fk_machude foreign key (machude) references chude(machude);
+alter table sach add constraint fk_manxb foreign key (manxb) references nhaxuatban(manxb);
+
+
+create table donhang_sach (
+	madonhang varchar(50) primary key not null,
+    masach varchar(50),
+    soluong int,
+    gia double,
+    constraint fk_madonhang foreign key (madonhang) references donhang(madonhang),
+	constraint fk_masach foreign key (masach) references sach(masach)
+);
+
+create table chude(
+	machude varchar(50) primary key not null,
+    tenchude varchar(50)
+);
+
+create table nhaxuatban (
+	manxb varchar(50) primary key not null,
+    tennxb varchar(50),
+    diachi varchar(100),
+    dienthoai varchar (20)
+);
+
+create table tacgia (
+	matacgia varchar(50) primary key not null,
+     tentacgia varchar (50), 
+     dienthoai varchar(20),
+     diachi varchar(100), 
+     tieusu text
+);
+
+create table tacgia_sach (
+	matacgia varchar(50),
+    masach varchar(50),
+    vaitro varchar(50),
+    vitri varchar(50)
+);
+alter table tacgia_sach add constraint fk_matacgia foreign key (matacgia) references tacgia(matacgia);
+alter table tacgia_sach add constraint fk_masach2 foreign key (masach) references sach(masach);
+

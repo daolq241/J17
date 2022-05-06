@@ -32,6 +32,10 @@ public class Manager extends Staff {
 		this.totalEmployee ++;
 	}
 	
+	public void decrementTotalEmp() {
+		this.totalEmployee --;
+	}
+	
 	@Override
 	public void inStaff(Scanner sc) {
 		// TODO Auto-generated method stub
